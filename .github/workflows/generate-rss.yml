@@ -8,13 +8,21 @@ on:
   push:
     branches: [ main ]
 
+
 jobs:
   generate-rss:
     runs-on: ubuntu-latest
     
+    # Add write permissions
+    permissions:
+      contents: write
+      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        # Required to push changes back to the repository
+        fetch-depth: 0
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -34,7 +42,4 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add anthropic_engineering_rss.xml
-        git diff --staged --quiet || git commit -m "Update RSS feed - $(date -u)"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git diff --staged --quiet || (git commit -m "Update RSS feed - $(date -u)" && git push "https://${{ secrets.ANTHROPIC_RSS_GH_TOKEN || github.token }}@github.com/${{ github.repository }}.git" HEAD:main)

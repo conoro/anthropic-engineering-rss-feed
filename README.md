@@ -36,14 +36,28 @@ python anthropic_rss.py
 
 1. Fork this repository to your GitHub account
 
-2. Update the RSS feed URL in `anthropic_rss.py`:
-   - Replace `YOUR_USERNAME/YOUR_REPO` with your actual GitHub username and repository name
-   - The URL should point to: `https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/anthropic_engineering_rss.xml`
+2. Create a Personal Access Token (PAT):
+   - Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
+   - Click "Generate new token"
+   - Name it "GitHub Actions RSS Updater"
+   - Set repository access to your forked repository
+   - Under "Repository permissions", grant:
+     - Contents: Read and write
+   - Click "Generate token" and copy the token
 
-3. Enable GitHub Actions in your repository settings
+3. Add the token to your repository secrets:
+   - Go to your repository → Settings → Secrets and variables → Actions
+   - Click "New repository secret"
+   - Name: `ANTHROPIC_RSS_GH_TOKEN`
+   - Value: Paste the token you copied
+   - Click "Add secret"
 
-4. The action will automatically:
-   - Run every hour
+4. Update the RSS feed URL in `anthropic_rss.py`:
+   - Replace `YOUR_USERNAME/YOUR_REPO` with your GitHub username and repository name
+   - The URL should be: `https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/anthropic_engineering_rss.xml`
+
+5. The GitHub Action will automatically:
+   - Run every hour (and on push to main)
    - Generate a fresh RSS feed
    - Commit and push updates to the repository
    - Make the RSS feed available at the raw GitHub URL
