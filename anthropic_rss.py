@@ -35,19 +35,19 @@ class AnthropicRSSGenerator:
             page = await browser.new_page()
             await page.goto(self.base_url)
             
-            # Wait for articles to be loaded
-            await page.wait_for_selector("div.ArticleList_articles__xFkBH")
+            # Wait for articles to be loaded using wildcard selector
+            await page.wait_for_selector("div[class*='ArticleList_articles__']")
             
-            # Get all article elements
-            articles = await page.query_selector_all("div.ArticleList_articles__xFkBH > div > article")
+            # Get all article elements using wildcard selector
+            articles = await page.query_selector_all("div[class*='ArticleList_articles__'] > div > article")
             
             # Store articles data for sorting
             articles_data = []
             
             for article in articles:
                 try:
-                    # Get title
-                    title_element = await article.query_selector("a > div.ArticleList_content__cqKil > h3")
+                    # Get title using wildcard selector
+                    title_element = await article.query_selector("a > div[class*='ArticleList_content__'] > h3")
                     title = await title_element.text_content()
                     
                     # Get URL
@@ -56,8 +56,8 @@ class AnthropicRSSGenerator:
                     if not url.startswith('http'):
                         url = f"https://www.anthropic.com{url}"
                     
-                    # Get date
-                    date_element = await article.query_selector("a > div.ArticleList_content__cqKil > div")
+                    # Get date using wildcard selector
+                    date_element = await article.query_selector("a > div[class*='ArticleList_content__'] > div")
                     date_text = await date_element.text_content()
                     parsed_date = self.parse_date(date_text)
                     
