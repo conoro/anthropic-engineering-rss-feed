@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Aug 2025 19:06:29 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Aug 2025 20:04:24 +0000</lastBuildDate>
     <item>
       <title>Introducing Contextual Retrieval</title>
       <link>https://www.anthropic.com/engineering/contextual-retrieval</link>
@@ -46,9 +46,9 @@
     </item>
     <item>
       <title>How we built our multi-agent research system</title>
-      <link>https://www.anthropic.com/engineering/built-multi-agent-research-system</link>
+      <link>https://www.anthropic.com/engineering/multi-agent-research-system</link>
       <description>How we built our multi-agent research system</description>
-      <guid isPermaLink="true">https://www.anthropic.com/engineering/built-multi-agent-research-system</guid>
+      <guid isPermaLink="true">https://www.anthropic.com/engineering/multi-agent-research-system</guid>
       <pubDate>Fri, 13 Jun 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
