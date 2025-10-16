@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Oct 2025 15:04:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Oct 2025 16:04:34 +0000</lastBuildDate>
     <item>
       <title>Introducing Contextual Retrieval</title>
       <link>https://www.anthropic.com/engineering/contextual-retrieval</link>
@@ -77,6 +77,13 @@
       <link>https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents</link>
       <description>Effective context engineering for AI agents</description>
       <guid isPermaLink="true">https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents</guid>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Building agents with the Claude Agent SDK</title>
+      <link>https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk</link>
+      <description>Building agents with the Claude Agent SDK</description>
+      <guid isPermaLink="true">https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk</guid>
       <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
