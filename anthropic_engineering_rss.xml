@@ -8,7 +8,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Nov 2025 18:06:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Nov 2025 19:03:13 +0000</lastBuildDate>
     <item>
       <title>Introducing Contextual Retrieval</title>
       <link>https://www.anthropic.com/engineering/contextual-retrieval</link>
@@ -99,6 +99,13 @@
       <description>Beyond permission prompts: making Claude Code more secure and autonomous</description>
       <guid isPermaLink="true">https://www.anthropic.com/engineering/claude-code-sandboxing</guid>
       <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Code execution with MCP: Building more efficient agents</title>
+      <link>https://www.anthropic.com/engineering/code-execution-with-mcp</link>
+      <description>Code execution with MCP: Building more efficient agents</description>
+      <guid isPermaLink="true">https://www.anthropic.com/engineering/code-execution-with-mcp</guid>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
